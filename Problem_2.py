@@ -27,6 +27,7 @@ Constraints:
 Solution:
 1. Recursion:
 Pick row or pick column.
+This solution is not efficient for larger grids due to its exponential time complexity.
 https://youtu.be/St-WLFHcRzw?t=217
 Time: O(2^MN), Space: O(1)
 
