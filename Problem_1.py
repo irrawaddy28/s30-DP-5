@@ -101,7 +101,6 @@ def wordBreak_dp(s: str, wordDict: List[str]) -> bool:
                     break
             else: # if prefix is not breakable, go to next j
                 pass
-        i += 1
     return dp[N]
 
 def run_wordBreak():
