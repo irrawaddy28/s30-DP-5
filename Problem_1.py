@@ -109,6 +109,7 @@ def run_wordBreak():
              ("leetcode", ["l", "le", "etc", "o"], False),
              ("applepenapple", ["apple","pen"], True),
              ("catsandog", ["cats","dog","sand","and","cat"], False),
+             ("abcd", ["a","abc","b","cd"], True), # interesting case: enforces looking at all previous segmentable strings instead of the just the last segmentable string. eg. Suppose we have discovered that "abc" is segmentable (since it's in dictionary) and we want to know if 'abcd' is segmentable. We can write 'abcd' = 'abc' (in dict) + 'd'. Since 'd' is not in dictionary, we declare 'abcd' is not segmentable. But this is incorrect. 'abcd' is segmentable if we split 'abcd' = 'ab' (segmentable) + 'cd' (in dict). And, 'ab' is segmentable since 'ab' = 'a' (in dict) + 'b'(in dict)
     ]
     for test in tests:
         s, wordDict, ans = test[0], test[1], test[2]
